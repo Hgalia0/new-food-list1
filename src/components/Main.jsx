@@ -3,6 +3,7 @@ import CardFood from './CardFood';
 import Card from './Card';
 import Showrecipe from './Showrecipe';
 import NavBar from './NavBar';
+import data from './menu.json';
 
 export default function
     () {
@@ -12,9 +13,7 @@ export default function
 
 
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
-            .then((res) => res.json())
-            .then((data) => setMeals(data.meals || []));
+           setMeals(data);
     }, []);
 
     console.log(meals);
@@ -33,8 +32,12 @@ export default function
             
 
         <p className='font-bold text-4xl '>Our menu :</p>
+        <br />
+        <br />
 
-            <div className='grid grid-cols-3 gap-20'>
+    
+
+            <div className='grid grid-cols-3 gap-30'>
 
                 {meals.map((meal)=>(
                      <CardFood key={meal.idMeal} meal={meal} onAddToCart={handleAddToCart} />

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Rosted Turkey",
+    "description": "Golden-brown, herb-infused whole turkey, slow-roasted to perfection.",
+    "price": 6.99,
+    "image": "/poulet.png"
+  },
+  {
+    "id": 2,
+    "name": "Creamy Lobster Linguine",
+    "description": "Rich and creamy linguine pasta tossed with tender lobster meat and a hint of garlic and herbs.",
+    "price": 14.99,
+    "image": "/pasta.png"
+  },
+  {
+    "id": 3,
+    "name": "Spaghetti Bolognese",
+    "description": "Classic Italian spaghetti served with rich beef Bolognese sauce, cherry tomatoes, and fresh basil.",
+    "price": 9.99,
+    "image": "/spagheti.png"
+  },
+  {
+    "id": 4,
+    "name": "Grilled Steak Plate",
+    "description": "Tender grilled steak served with fresh arugula, cherry tomatoes, and a zesty lemon drizzle.",
+    "price": 13.49,
+    "image": "/steak.png"
+  },
+  {
+    "id": 5,
+    "name": "Eto Diet Bowl",
+    "description": "Clean and balanced dish featuring lean protein, greens, and slow carbs — perfect for a light meal.",
+    "price": 8.99,
+    "image": "/saladd.png"
+  },
+  {
+    "id": 6 ,
+    "name": "Grilled Meat & Potatoes",
+    "description": "Savory grilled meat served with golden roasted potatoes and fragrant rosemary.",
+    "price": 11.25,
+    "image": "/food.png"
+  }
+]

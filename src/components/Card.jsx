@@ -4,7 +4,7 @@ import remove from '../images/delete.png'
 import Showrecipe from './Showrecipe';
 
 export default function Card({ cart, onConfirmOrder }) {
-
+  const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
 
 
   return (
@@ -26,14 +26,12 @@ export default function Card({ cart, onConfirmOrder }) {
               <div key={index} className="flex flex-col gap-2 text-sm py-1">
                 <div className='flex justify-between items-center'>
                   <div className='flex items-center gap-3'>
-                    <img src={item.strMealThumb} alt={item.strMeal} className="w-10 rounded-[8px] 
+                    <img src={item.image} alt="" className="w-10 rounded-[8px] 
                 " />
-                    <p className='text-[16px] font-semibold'>{item.strMeal}</p>
+                    <p className='text-[16px] font-semibold'>{item.name}</p>
 
                   </div>
-                  <span>
-                    <img src={remove} alt="remove" className='w-6 cursor-pointer' />
-                  </span>
+                  <p className='text-[16px] font-semibold text-orange-800'>{item.price} $ </p>
                 </div>
                 <div className='border-b border-neutral-300 mb-2'></div>
               </div>
@@ -44,7 +42,7 @@ export default function Card({ cart, onConfirmOrder }) {
               {/* 💵 Order Total */}
               <div className="mt-4 text-right flex  justify-between">
                 <p className='text-gray-400 text-sm'>Order Total</p>
-                <p className='font-bold text-lg'>${(cart.length * 6.5).toFixed(2)}</p>
+                   <p className='font-bold text-lg'>${total.toFixed(2)}</p>
               </div>
 
               <button className='bg-orange-800 text-white rounded-3xl font-bold text-[18px] w-70 p-2 hover:bg-orange-400 ' onClick={onConfirmOrder}>
