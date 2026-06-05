@@ -6,6 +6,9 @@ export default {
       animation: {
         slowspin: "spin 20s linear infinite", // spin once every 20 seconds
       },
+          fontFamily: {
+      montserrat: ['Montserrat', 'sans-serif'],
+    },
     },
   },
   plugins: [],
