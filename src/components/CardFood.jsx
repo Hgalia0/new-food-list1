@@ -28,7 +28,8 @@ export default function CardFood({ meal, onAddToCart, isCenter }) {
         <img 
           src={meal.image} 
           alt={meal.name} 
-          className="w-full h-full object-cover rounded-full" 
+          className="w-full h-full object-cover mix-blend-multiply rounded-full" 
+          style={{ mixBlendMode: 'multiply' }}
         />
       </div>
 

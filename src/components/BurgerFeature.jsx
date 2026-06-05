@@ -30,7 +30,7 @@ export default function BurgerFeature({ onOrderNow }) {
 
   return (
     <section className="w-full py-24 px-6 md:px-16 max-w-7xl mx-auto overflow-visible bg-transparent" id="feature">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 g md:gap-16 items-center">
         
         {/* LEFT COLUMN: THE BURGER PRESENTATION FIX */}
         <motion.div 
@@ -44,7 +44,7 @@ export default function BurgerFeature({ onOrderNow }) {
           <div className="absolute top-1/2 left-1/2 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-[400px] md:h-[400px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
           
           {/* Video Container Frame */}
-          <div className="relative w-[85%] sm:w-[65%] md:w-[90%] max-w-sm rounded-full overflow-hidden bg-transparent">
+          <div className="relative w-[85%] sm:w-[65%] md:w-[90%] max-w-sm rounded-full overflow-hidden bg-transparent max-sm:hidden">
             <video
               ref={videoRef}
               autoPlay
@@ -67,17 +67,22 @@ export default function BurgerFeature({ onOrderNow }) {
                 onClick={toggleMobilePlay}
                 className="absolute inset-0 w-full h-full bg-black/20 backdrop-blur-[2px] flex flex-col items-center justify-center gap-2 text-white transition-opacity duration-300 active:opacity-90"
               >
-                <div className="w-12 h-12 rounded-full border border-white/40 flex items-center justify-center bg-white/10 shadow-md">
+                <div className="w-12 h-12 max-sm:hidden
+                rounded-full border border-white/40 flex items-center justify-center bg-white/10 shadow-md">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4 ml-0.5 text-white">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
+            
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase bg-black/40 px-3 py-1 rounded-full">
                   Tap to Animate
                 </span>
               </button>
             )}
           </div>
+              <div className='relative w-[85%] sm:w-[65%] md:w-[90%] max-w-sm rounded-full overflow-hidden bg-transparent sm:hidden'>
+ <img src="/burge.png" alt="" />
+                </div>
         </motion.div>
 
         {/* RIGHT COLUMN: TEXT CONTENT & COPY */}

@@ -149,7 +149,8 @@ const [isStoryOpen, setIsStoryOpen] = useState(false);
           <img 
             src="./food.png" 
             alt="Exquisite gourmet presentation" 
-            className='w-full max-w-[480px] lg:max-w-[540px] h-auto object-cover animate-spin-slow rounded-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-transform duration-1000 ease-out hover:scale-[1.02]' 
+            className='w-full max-w-[480px] lg:max-w-[540px] h-auto mix-blend-multiply object-cover animate-spin-slow rounded-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-transform duration-1000 ease-out hover:scale-[1.02]' 
+            style={{ mixBlendMode: 'multiply' }}
           />
         </motion.div>
         
